@@ -1,4 +1,4 @@
-import { CharacterCard } from "./components/CharacterCard/CharacterCard";
+import { CharacterCard } from "./components/CharacterCard/CharacterCard.js";
 
 const cardContainer = document.querySelector('[data-js="card-container"]');
 const searchBarContainer = document.querySelector(
@@ -15,4 +15,4 @@ const maxPage = 1;
 const page = 1;
 const searchQuery = "";
 
-CharacterCard();
+cardContainer.append(CharacterCard());

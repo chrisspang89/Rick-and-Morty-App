@@ -1,5 +1,3 @@
-import cardContainer from "./index.js";
-
 export function CharacterCard() {
   const card = document.createElement("li");
   card.classList.add("card");
@@ -24,6 +22,5 @@ export function CharacterCard() {
     </dl>
   </div>`;
 
-  cardContainer.append(card);
   return card;
 }
