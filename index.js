@@ -30,24 +30,22 @@ async function fetchCharacters() {
     console.log(element);
   });
 
-  prevButton.addEventListener("click", () => {
-    if (page > 1) {
-      page--;
-      fetchCharacters();
-    }
-  });
-
-  nextButton.addEventListener("click", () => {
-    if (page < maxPage) {
-      page++;
-      fetchCharacters();
-    }
-  });
-
   pagination.textContent = `${page} / ${maxPage}`;
 
   prevButton.disabled = page <= 1;
   nextButton.disabled = page >= maxPage;
 }
+prevButton.addEventListener("click", () => {
+  if (page > 1) {
+    page--;
+    fetchCharacters();
+  }
+});
 
+nextButton.addEventListener("click", () => {
+  if (page < maxPage) {
+    page++;
+    fetchCharacters();
+  }
+});
 fetchCharacters();
